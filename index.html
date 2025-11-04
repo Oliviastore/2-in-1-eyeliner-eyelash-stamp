@@ -1,0 +1,1031 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2-in-1 Eyeliner & Eyelash Stamp - EveryGood.id</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        :root {
+            --primary: #333333;
+            --secondary: #D4AF37;
+            --accent: #FF3366;
+            --light: #F8F9FA;
+            --dark: #212529;
+            --white: #FFFFFF;
+            --gradient: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--primary);
+            background-color: var(--white);
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        /* Header */
+        header {
+            background-color: var(--white);
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--primary);
+            text-decoration: none;
+        }
+        
+        .logo span {
+            color: var(--secondary);
+        }
+        
+        .cta-button {
+            background-color: var(--accent);
+            color: var(--white);
+            padding: 10px 25px;
+            border-radius: 30px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+        
+        .cta-button:hover {
+            background-color: #ff1a55;
+            transform: translateY(-2px);
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: var(--gradient);
+            padding: 60px 0 40px;
+        }
+        
+        .hero-content {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+        }
+        
+        .hero-images {
+            flex: 1;
+        }
+        
+        .hero-image {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        .hero-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        .hero-details {
+            flex: 1;
+        }
+        
+        .hero h1 {
+            font-size: 36px;
+            margin-bottom: 15px;
+            font-weight: 700;
+            color: var(--primary);
+        }
+        
+        .hero p {
+            font-size: 18px;
+            margin-bottom: 25px;
+            color: #555555;
+        }
+        
+        .price-container {
+            margin-bottom: 20px;
+        }
+        
+        .current-price {
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--accent);
+        }
+        
+        .original-price {
+            text-decoration: line-through;
+            font-size: 20px;
+            color: #999999;
+            margin-right: 10px;
+        }
+        
+        .discount-badge {
+            background-color: var(--accent);
+            color: var(--white);
+            padding: 3px 12px;
+            border-radius: 15px;
+            font-weight: 600;
+            font-size: 14px;
+            display: inline-block;
+            margin-left: 10px;
+        }
+        
+        .countdown-timer {
+            display: flex;
+            gap: 10px;
+            margin: 25px 0;
+            background-color: rgba(212, 175, 55, 0.1);
+            padding: 15px;
+            border-radius: 10px;
+            border: 1px solid var(--secondary);
+            max-width: 400px;
+        }
+        
+        .countdown-box {
+            color: var(--primary);
+            padding: 8px;
+            border-radius: 5px;
+            min-width: 60px;
+            text-align: center;
+        }
+        
+        .countdown-number {
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--secondary);
+        }
+        
+        .countdown-label {
+            font-size: 10px;
+            text-transform: uppercase;
+            color: #555555;
+        }
+        
+        /* Product Showcase */
+        .product-showcase {
+            padding: 60px 0;
+            text-align: center;
+        }
+        
+        .section-title {
+            font-size: 28px;
+            margin-bottom: 40px;
+            color: var(--primary);
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title:after {
+            content: '';
+            position: absolute;
+            width: 50%;
+            height: 2px;
+            background-color: var(--secondary);
+            bottom: -8px;
+            left: 25%;
+        }
+        
+        .product-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+        
+        .gallery-item {
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+            background-color: var(--white);
+        }
+        
+        .gallery-item:hover {
+            transform: translateY(-5px);
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        /* Features */
+        .features {
+            background-color: var(--light);
+            padding: 60px 0;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+        
+        .feature-card {
+            background-color: var(--white);
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.03);
+            text-align: center;
+        }
+        
+        .feature-icon {
+            font-size: 32px;
+            color: var(--secondary);
+            margin-bottom: 15px;
+        }
+        
+        .feature-card h3 {
+            color: var(--primary);
+            margin-top: 0;
+            font-size: 18px;
+        }
+        
+        /* How to Use */
+        .how-to-use {
+            padding: 60px 0;
+            background-color: var(--white);
+        }
+        
+        .steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .step {
+            text-align: center;
+            padding: 30px;
+            border-radius: 8px;
+            background-color: var(--light);
+        }
+        
+        .step-number {
+            background-color: var(--secondary);
+            color: var(--white);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-weight: 700;
+            font-size: 20px;
+        }
+        
+        /* Testimonials */
+        .testimonials {
+            padding: 60px 0;
+            background-color: var(--light);
+            text-align: center;
+        }
+        
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-top: 50px;
+        }
+        
+        .testimonial-card {
+            background-color: var(--white);
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+            text-align: left;
+        }
+        
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 15px;
+            color: #555555;
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+        }
+        
+        .author-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 12px;
+            object-fit: cover;
+            background-color: var(--secondary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+        }
+        
+        .author-name {
+            font-weight: 600;
+            margin: 0;
+            font-size: 16px;
+        }
+        
+        .author-title {
+            color: #888888;
+            margin: 0;
+            font-size: 13px;
+        }
+        
+        /* FAQ */
+        .faq {
+            background-color: var(--white);
+            padding: 60px 0;
+        }
+        
+        .faq-container {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .faq-item {
+            margin-bottom: 12px;
+            border: 1px solid #eeeeee;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        
+        .faq-question {
+            background-color: var(--light);
+            padding: 15px 20px;
+            cursor: pointer;
+            font-weight: 600;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 15px;
+        }
+        
+        .faq-answer {
+            padding: 0 20px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+            background-color: var(--white);
+            font-size: 14px;
+        }
+        
+        .faq-item.active .faq-answer {
+            padding: 15px 20px;
+            max-height: 500px;
+        }
+        
+        /* Guarantee */
+        .guarantee {
+            padding: 60px 0;
+            text-align: center;
+            background-color: var(--light);
+        }
+        
+        .guarantee-badge {
+            background-color: var(--secondary);
+            color: var(--primary);
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 25px;
+            font-weight: 700;
+            font-size: 16px;
+        }
+        
+        /* CTA Section */
+        .cta-section {
+            background-color: var(--accent);
+            color: var(--white);
+            padding: 60px 0;
+            text-align: center;
+        }
+        
+        .cta-section h2 {
+            font-size: 28px;
+            margin-bottom: 15px;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 25px;
+            flex-wrap: wrap;
+        }
+        
+        .cta-primary {
+            background-color: var(--primary);
+            color: var(--white);
+            padding: 12px 35px;
+            border-radius: 30px;
+            font-weight: 600;
+            text-decoration: none;
+            font-size: 16px;
+            transition: all 0.3s;
+        }
+        
+        .cta-primary:hover {
+            background-color: #222222;
+            transform: translateY(-2px);
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+        
+        .cta-secondary {
+            background-color: transparent;
+            color: var(--white);
+            border: 2px solid var(--white);
+            padding: 12px 35px;
+            border-radius: 30px;
+            font-weight: 600;
+            text-decoration: none;
+            font-size: 16px;
+            transition: all 0.3s;
+        }
+        
+        .cta-secondary:hover {
+            background-color: rgba(255,255,255,0.1);
+            transform: translateY(-2px);
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--primary);
+            color: var(--white);
+            padding: 40px 0 20px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 25px;
+            margin-bottom: 30px;
+        }
+        
+        .footer-column h3 {
+            color: var(--secondary);
+            margin-top: 0;
+            margin-bottom: 15px;
+            font-size: 18px;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 12px;
+        }
+        
+        .social-link {
+            color: var(--white);
+            font-size: 18px;
+            transition: color 0.3s;
+        }
+        
+        .social-link:hover {
+            color: var(--secondary);
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 13px;
+            color: #aaaaaa;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-content {
+                flex-direction: column;
+            }
+            
+            .hero h1 {
+                font-size: 28px;
+            }
+            
+            .hero p {
+                font-size: 16px;
+            }
+            
+            .section-title {
+                font-size: 24px;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .cta-primary, .cta-secondary {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-content">
+            <a href="#" class="logo">EveryGood<span>.id</span></a>
+            <a href="#order" class="cta-button">PESAN SEKARANG</a>
+        </div>
+    </header>
+    
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container hero-content">
+            <div class="hero-images">
+                <div class="hero-image">
+                    <img src="https://cdn.wshopon.com/image/42d3787ebb490f6a1f00a59f42774bddb1d8c3b6.jpeg" alt="2-in-1 Eyeliner & Eyelash Stamp - Demo GIF">
+                </div>
+            </div>
+            
+            <div class="hero-details">
+                <h1>2-in-1 Eyeliner & Eyelash Stamp</h1>
+                <p>Buat eyeliner sempurna dan bulu mata bawah yang menawan dalam hitungan detik!</p>
+                
+                <div class="price-container">
+                    <span class="original-price">Rp318,000</span>
+                    <span class="current-price">Rp159,000</span>
+                    <span class="discount-badge">DISKON 50%</span>
+                </div>
+                
+                <div class="countdown-timer">
+                    <div class="countdown-box">
+                        <div class="countdown-number" id="hours">12</div>
+                        <div class="countdown-label">Jam</div>
+                    </div>
+                    <div class="countdown-box">
+                        <div class="countdown-number" id="minutes">45</div>
+                        <div class="countdown-label">Menit</div>
+                    </div>
+                    <div class="countdown-box">
+                        <div class="countdown-number" id="seconds">30</div>
+                        <div class="countdown-label">Detik</div>
+                    </div>
+                </div>
+                
+                <a href="#order" class="cta-button">DAPATKAN DISKON 50%</a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Product Showcase -->
+    <section class="product-showcase">
+        <div class="container">
+            <h2 class="section-title">Hasil yang Sempurna Setiap Saat</h2>
+            
+            <div class="product-gallery">
+                <div class="gallery-item">
+                    <img src="https://kaberryfls.com/wp-content/uploads/2024/08/2-in-1-Eyeliner-Lower-Eyelash-Stamp-Set-20240813105321-4.webp" alt="2-in-1 Eyeliner & Eyelash Stamp - Kemasan">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://cdn.wshopon.com/image/9468ba16aa37a1d349930c5c5437be97107539a7.jpeg" alt="2-in-1 Eyeliner & Eyelash Stamp - Detail Produk">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://cdn.wshopon.com/image/a97d9175849f4c54c373fedb1d89b71272f0064e.jpeg" alt="2-in-1 Eyeliner & Eyelash Stamp - Hasil Aplikasi">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://cdn.wshopon.com/image/3064fb35c0f013d69cdda7e548f98ba5a09b9b61.jpeg" alt="2-in-1 Eyeliner & Eyelash Stamp - Tampilan Samping">
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Features -->
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title">Keunggulan Produk</h2>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3>Praktis & Cepat</h3>
+                    <p>Hasil eyeliner dan bulu mata sempurna dalam hitungan detik tanpa perlu skill khusus.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-paint-brush"></i>
+                    </div>
+                    <h3>2-in-1 Fungsi</h3>
+                    <p>Eyeliner stamp untuk garis mata yang tajam dan eyelash stamp untuk bulu mata bawah yang natural.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-user-check"></i>
+                    </div>
+                    <h3>Cocok untuk Pemula</h3>
+                    <p>Desain yang mudah digunakan bahkan untuk yang baru belajar makeup.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-tint-slash"></i>
+                    </div>
+                    <h3>Waterproof</h3>
+                    <p>Formula tahan air yang tidak mudah luntur sepanjang hari.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-allergies"></i>
+                    </div>
+                    <h3>Hypoallergenic</h3>
+                    <p>Aman untuk kulit sensitif dan area mata yang sensitif.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-gem"></i>
+                    </div>
+                    <h3>Hasil Profesional</h3>
+                    <p>Tampilan seperti hasil salon makeup dengan harga terjangkau.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- How to Use -->
+    <section class="how-to-use">
+        <div class="container">
+            <h2 class="section-title">Cara Penggunaan</h2>
+            
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Celupkan Stamp</h3>
+                    <p>Celupkan stamp ke dalam eyeliner hingga seluruh permukaan tertutup.</p>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Tempelkan</h3>
+                    <p>Tempelkan stamp pada kelopak mata dengan tekanan ringan.</p>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Angkat Perlahan</h3>
+                    <p>Angkat stamp perlahan untuk mendapatkan garis eyeliner yang sempurna.</p>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <h3>Bulu Mata Bawah</h3>
+                    <p>Gunakan eyelash stamp untuk bulu mata bawah yang natural.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <div class="container">
+            <h2 class="section-title">Apa Kata Pelanggan Kami?</h2>
+            
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        "Sebagai pemula di dunia makeup, produk ini sangat membantu! Eyeliner saya sekarang selalu rapi dan simetris. Hasilnya seperti profesional!"
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">S</div>
+                        <div>
+                            <p class="author-name">Sarah, 25</p>
+                            <p class="author-title">Mahasiswi</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        "Saya selalu kesulitan membuat eyeliner yang simetris. Dengan produk ini, hanya butuh 30 detik untuk hasil yang sempurna. Sangat worth it!"
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">D</div>
+                        <div>
+                            <p class="author-name">Dewi, 32</p>
+                            <p class="author-title">Karyawan</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        "Bulu mata bawahnya terlihat sangat natural! Produk ini menghemat waktu makeup saya di pagi hari. Sudah rekomendasikan ke teman-teman!"
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">R</div>
+                        <div>
+                            <p class="author-name">Rina, 28</p>
+                            <p class="author-title">Ibu Rumah Tangga</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- FAQ -->
+    <section class="faq">
+        <div class="container">
+            <h2 class="section-title">Pertanyaan yang Sering Diajukan</h2>
+            
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Apakah produk ini cocok untuk pemula?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Ya, produk ini sangat cocok untuk pemula! Desainnya yang mudah digunakan memungkinkan siapa saja mendapatkan hasil eyeliner yang sempurna tanpa perlu skill khusus.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Berapa lama eyeliner ini tahan?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Eyeliner ini memiliki formula waterproof yang dapat bertahan hingga 12 jam, tergantung jenis kulit dan kondisi lingkungan. Untuk hasil terbaik, pastikan area mata bersih dan kering sebelum aplikasi.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Apakah mudah dibersihkan?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Ya, eyeliner ini dapat dibersihkan dengan mudah menggunakan makeup remover berbasis minyak atau micellar water. Stamp juga dapat dibersihkan dengan air dan sabun lembut.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Berapa lama waktu pengiriman?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Kami memproses pesanan dalam 1-2 hari kerja. Pengiriman reguler membutuhkan waktu 3-5 hari kerja, sedangkan ekspres 1-2 hari kerja setelah pemrosesan.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Apakah ada garansi untuk produk ini?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Kami memberikan garansi 30 hari terhadap cacat produksi. Jika ada masalah, silakan hubungi tim dukungan kami dengan menyertakan foto dan deskripsi masalahnya.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Guarantee -->
+    <section class="guarantee">
+        <div class="container">
+            <div class="guarantee-badge">
+                100%<br>KEPUASAN
+            </div>
+            <h2>Jaminan Kepuasan 100%</h2>
+            <p>Kami begitu yakin dengan kualitas produk kami sehingga kami menawarkan jaminan uang kembali 30 hari jika Anda tidak sepenuhnya puas dengan pembelian Anda.</p>
+        </div>
+    </section>
+    
+    <!-- CTA Section -->
+    <section class="cta-section" id="order">
+        <div class="container">
+            <h2>Dapatkan Eyeliner Sempurna dengan Mudah!</h2>
+            <p>Pesan 2-in-1 Eyeliner & Eyelash Stamp sekarang dengan harga spesial sebelum kehabisan!</p>
+            
+            <div class="price-container">
+                <span class="original-price">Rp318,000</span>
+                <span class="current-price">Rp159,000</span>
+                <span class="discount-badge">DISKON 50%</span>
+            </div>
+            
+            <div class="countdown-timer" style="justify-content: center; margin: 25px 0;">
+                <div class="countdown-box">
+                    <div class="countdown-number" id="cta-hours">12</div>
+                    <div class="countdown-label">Jam</div>
+                </div>
+                <div class="countdown-box">
+                    <div class="countdown-number" id="cta-minutes">45</div>
+                    <div class="countdown-label">Menit</div>
+                </div>
+                <div class="countdown-box">
+                    <div class="countdown-number" id="cta-seconds">30</div>
+                    <div class="countdown-label">Detik</div>
+                </div>
+            </div>
+            
+            <div class="cta-buttons">
+                <a href="https://rara.orderonline.id/2-in-1-eyeliner-eyelash-stamp" class="cta-primary">PESAN SEKARANG</a>
+                <a href="#features" class="cta-secondary">LIHAT DETAIL</a>
+            </div>
+            
+            <p style="margin-top: 25px; font-size: 13px;">*Harga promo terbatas hanya untuk 50 pembeli pertama hari ini</p>
+        </div>
+    </section>
+              </div>
+    </footer>
+    
+    <!-- OrderOnline Embed Code -->
+    <div class="ooef"> 
+        <form class="orderonline-embed-form" data-username="rara" data-product-slug="2-in-1-eyeliner-eyelash-stamp" data-product-id="6909fe3bf3abc8545e0ec388" id="oo-embed-form-2-in-1-eyeliner-eyelash-stamp-1034" data-origin="orderonline"> 
+            <div class="ooef-loader">
+                <style>
+                    .ooef-loader{
+                        visibility: hidden;
+                        opacity: 0;
+                        position: absolute;
+                        left: 0;
+                        right: 0;
+                        top: 0;
+                        bottom: 0;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        flex-direction: column;
+                        animation: ooLoadingIn 10s ease;
+                        -webkit-animation: ooLoadingIn 10s ease;
+                        animation-fill-mode: forwards;
+                        overflow: hidden
+                    }
+                    @keyframes ooLoadingIn{
+                        0%{visibility: hidden;opacity: 0}
+                        20%{visibility: visible;opacity: 0}
+                        100%{visibility: visible;opacity: 1}
+                    }
+                    @-webkit-keyframes ooLoadingIn{
+                        0%{visibility: hidden;opacity: 0}
+                        20%{visibility: visible;opacity: 0}
+                        100%{visibility: visible;opacity: 1}
+                    }
+                    .ooef-loader>div,.ooef-loader>div:after{
+                        border-radius: 50%;
+                        width: 2.5rem;
+                        height: 2.5rem
+                    }
+                    .ooef-loader>div{
+                        font-size: 10px;
+                        position: relative;
+                        text-indent: -9999em;
+                        border: .25rem solid #f5f5f5;
+                        border-left: .25rem solid #55c4cf;
+                        -webkit-transform: translateZ(0);
+                        -ms-transform: translateZ(0);
+                        transform: translateZ(0);
+                        -webkit-animation: ooLoading 1.1s infinite linear;
+                        animation: ooLoading 1.1s infinite linear
+                    }
+                    .ooef-loader.error>div{
+                        border-left: .25rem solid #ff4500;
+                        animation-duration: 5s
+                    }
+                    @-webkit-keyframes ooLoading{
+                        0%{-webkit-transform: rotate(0);transform: rotate(0)}
+                        100%{-webkit-transform: rotate(360deg);transform: rotate(360deg)}
+                    }
+                    @keyframes ooLoading{
+                        0%{-webkit-transform: rotate(0);transform: rotate(0)}
+                        100%{-webkit-transform: rotate(360deg);transform: rotate(360deg)}
+                    }
+                </style>
+                <div aria-live="polite" role="status"><div>Loading...</div></div>
+            </div> 
+        </form> 
+    </div> 
+    <script> 
+        if (typeof xLogError != 'function') { 
+            var xLogError = function (error) { 
+                var req = new XMLHttpRequest(); 
+                var payload = JSON.stringify({ url: document.location.href, line: error.line, stack: error.stack }); 
+                var params = 'message=' + encodeURIComponent(error.name) + '&payload=' + encodeURIComponent(payload) + '&type=embed&level=error'; 
+                req.open('POST', 'https://api.orderonline.id/log', true); 
+                req.setRequestHeader('Content-type', 'application/x-www-form-urlencoded'); 
+                req.send(params); 
+            }; 
+        } 
+        try { 
+            if (typeof xEmbedScript != 'function') { 
+                var xEmbedScript = function () { 
+                    !function(w, d, e, v, id, t, s) { 
+                        if (d.getElementById(id)) return; 
+                        t = d.createElement(e);t.async = !0;t.src = v;t.id = id; 
+                        s = d.getElementsByTagName(e)[0]; 
+                        s.parentNode.insertBefore(t, s); 
+                    }(window, document, 'script', 'https://cdn.orderonline.id/js/embed-v2-slim.min.js?v=8.0.4', 'oo-embed-js'); 
+                }; 
+            } 
+            if (typeof xEmbedInit != 'function') { 
+                var xEmbedInit = function (w, n) { 
+                    if (w.ooe) return; 
+                    n = w.ooe = function() { 
+                        n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments) 
+                    }; 
+                    if (!w._ooe) w._ooe = n; 
+                    n.push = n;n.loaded = !0;n.version = '8.0.4';n.queue = []; 
+                }; 
+            } 
+            xEmbedInit(window); 
+            ooe('setup', 'redirect', 'https://rara.orderonline.id'); 
+            ooe('init', '5f12ee789d8e8e5e870172ee', '6909fe3bf3abc8545e0ec388', '6909fe3bf3abc8545e0ec389', 'oo-embed-form-2-in-1-eyeliner-eyelash-stamp-1034', {"mode":"page","action":"Klik untuk pemesanan","title":"Form Pemesanan","triggerPixel":false,"triggerGtm":false}); 
+            if (!window.jQuery) { 
+                !function(w, d, e, v, id, t, s) { 
+                    if (d.getElementById(id)) return; 
+                    t = d.createElement(e);t.async = !0;t.src = v;t.id = id; 
+                    t.addEventListener('load', xEmbedScript); 
+                    s = d.getElementsByTagName(e)[0]; 
+                    s.parentNode.insertBefore(t, s); 
+                }(window, document, 'script', 'https://cdn.orderonline.id/js/vendor/jquery.min.js', 'oo-embed-jquery'); 
+            } else { 
+                xEmbedScript(); 
+            } 
+        } catch (e) { 
+            xLogError(e); 
+            throw e; 
+        } 
+    </script> 
+    <!-- End OrderOnline Embed Code -->
+
+    <script>
+        // Countdown Timer
+        function updateCountdown() {
+            const now = new Date();
+            const endOfDay = new Date();
+            endOfDay.setHours(23, 59, 59, 999);
+            
+            const diff = endOfDay - now;
+            
+            const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+            
+            document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
+            document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
+            document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
+            
+            document.getElementById('cta-hours').textContent = hours.toString().padStart(2, '0');
+            document.getElementById('cta-minutes').textContent = minutes.toString().padStart(2, '0');
+            document.getElementById('cta-seconds').textContent = seconds.toString().padStart(2, '0');
+        }
+        
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+        
+        // FAQ Accordion
+        const faqQuestions = document.querySelectorAll('.faq-question');
+        faqQuestions.forEach(question => {
+            question.addEventListener('click', () => {
+                const item = question.parentNode;
+                item.classList.toggle('active');
+                
+                const icon = question.querySelector('i');
+                if (item.classList.contains('active')) {
+                    icon.classList.remove('fa-chevron-down');
+                    icon.classList.add('fa-chevron-up');
+                } else {
+                    icon.classList.remove('fa-chevron-up');
+                    icon.classList.add('fa-chevron-down');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
